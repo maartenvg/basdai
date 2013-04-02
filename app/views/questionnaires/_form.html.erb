@@ -1,0 +1,57 @@
+<%= form_for(@questionnaire) do |f| %>
+  <% if @questionnaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@questionnaire.errors.count, "error") %> prohibited this questionnaire from being saved:</h2>
+
+      <ul>
+      <% @questionnaire.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :medication %><br />
+    <%= f.text_field :medication %>
+  </div>
+  <div class="field">
+    <%= f.label :medication_effectiveness %><br />
+    <%= f.number_field :medication_effectiveness %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :fatigue %><br />
+    <%= f.number_field :fatigue %>
+  </div>
+  <div class="field">
+    <%= f.label :as_pain %><br />
+    <%= f.number_field :as_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :other_pain %><br />
+    <%= f.number_field :other_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :localized_discomfort %><br />
+    <%= f.number_field :localized_discomfort %>
+  </div>
+  <div class="field">
+    <%= f.label :wakeup_discomfort %><br />
+    <%= f.number_field :wakeup_discomfort %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_stiffness %><br />
+    <%= f.text_field :morning_stiffness %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

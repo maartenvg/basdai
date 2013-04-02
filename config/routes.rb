@@ -1,4 +1,7 @@
 BasdaiApp::Application.routes.draw do
+  resources :questionnaires
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

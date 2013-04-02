@@ -1,0 +1,41 @@
+<h1>Listing questionnaires</h1>
+
+<table>
+  <tr>
+    <th>Medication</th>
+    <th>Medication effectiveness</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Fatigue</th>
+    <th>As pain</th>
+    <th>Other pain</th>
+    <th>Localized discomfort</th>
+    <th>Wakeup discomfort</th>
+    <th>Morning stiffness</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questionnaires.each do |questionnaire| %>
+  <tr>
+    <td><%= questionnaire.medication %></td>
+    <td><%= questionnaire.medication_effectiveness %></td>
+    <td><%= questionnaire.age %></td>
+    <td><%= questionnaire.gender %></td>
+    <td><%= questionnaire.fatigue %></td>
+    <td><%= questionnaire.as_pain %></td>
+    <td><%= questionnaire.other_pain %></td>
+    <td><%= questionnaire.localized_discomfort %></td>
+    <td><%= questionnaire.wakeup_discomfort %></td>
+    <td><%= questionnaire.morning_stiffness %></td>
+    <td><%= link_to 'Show', questionnaire %></td>
+    <td><%= link_to 'Edit', edit_questionnaire_path(questionnaire) %></td>
+    <td><%= link_to 'Destroy', questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Questionnaire', new_questionnaire_path %>

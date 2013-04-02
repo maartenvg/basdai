@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Medication:</b>
+  <%= @questionnaire.medication %>
+</p>
+
+<p>
+  <b>Medication effectiveness:</b>
+  <%= @questionnaire.medication_effectiveness %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @questionnaire.age %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @questionnaire.gender %>
+</p>
+
+<p>
+  <b>Fatigue:</b>
+  <%= @questionnaire.fatigue %>
+</p>
+
+<p>
+  <b>As pain:</b>
+  <%= @questionnaire.as_pain %>
+</p>
+
+<p>
+  <b>Other pain:</b>
+  <%= @questionnaire.other_pain %>
+</p>
+
+<p>
+  <b>Localized discomfort:</b>
+  <%= @questionnaire.localized_discomfort %>
+</p>
+
+<p>
+  <b>Wakeup discomfort:</b>
+  <%= @questionnaire.wakeup_discomfort %>
+</p>
+
+<p>
+  <b>Morning stiffness:</b>
+  <%= @questionnaire.morning_stiffness %>
+</p>
+
+
+<%= link_to 'Edit', edit_questionnaire_path(@questionnaire) %> |
+<%= link_to 'Back', questionnaires_path %>

@@ -9,13 +9,13 @@ en:
       questionnaire:
         medication: "If you are currently taking medication for your AS, please give the name(s) and dose that is on the bottle/packet."
         medication_effectiveness: "Please indicate the effectiveness of the medication in relieving your symptoms. "
-        age: "Please indicate your age."
-        gender: "Please indicate your gender."
-        gender_m: "Male"
-        gender_f: "Female"
         fatigue: "How would you describe the overall level of fatigue/tiredness you have experienced?"
         as_pain: "How would you describe the overall level of AS neck, back or hip pain you have had?"
         other_pain: "How would you describe the overall level of pain/swelling in joints other than neck, back or hips you have had?"
         localized_discomfort: "How would you describe the overall level of discomfort you have had from any areas tender to touch or pressure?"
         wakeup_discomfort: "How would you describe the overall level of discomfort you have had from the time you wake up?"
         morning_stiffness: "How long does your morning stiffness last from the time you wake up?"
+      user:
+        gender: "Please indicate your gender."
+        gender_m: "Male"
+        gender_f: "Female"

@@ -3,8 +3,6 @@
 one:
   medication: MyString
   medication_effectiveness: 1
-  age: 1
-  gender: m
   fatigue: 1
   as_pain: 1
   other_pain: 1
@@ -14,8 +12,6 @@ one:
 
 two:
   medication_effectiveness: 1
-  age: 1
-  gender: f
   fatigue: 1
   as_pain: 1
   other_pain: 1

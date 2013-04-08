@@ -11,28 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408131756) do
-
-  create_table "basdai_forms", :force => true do |t|
-    t.string   "medication"
-    t.integer  "effectiveness"
-    t.integer  "age"
-    t.string   "gender"
-    t.integer  "fatigue"
-    t.integer  "neck_pain"
-    t.integer  "other_pain"
-    t.integer  "touch_discomfort"
-    t.integer  "wakeup_discomfort"
-    t.decimal  "morning_stiffness"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130408141816) do
 
   create_table "questionnaires", :force => true do |t|
     t.string   "medication"
     t.integer  "medication_effectiveness"
-    t.integer  "age"
-    t.string   "gender"
     t.integer  "fatigue"
     t.integer  "as_pain"
     t.integer  "other_pain"
@@ -41,6 +24,16 @@ ActiveRecord::Schema.define(:version => 20130408131756) do
     t.integer  "morning_stiffness"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.string   "email"
+    t.date     "birthdate"
+    t.string   "gender"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

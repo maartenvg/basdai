@@ -18,7 +18,11 @@ class QuestionnairesControllerTest < ActionController::TestCase
 
   test "should create questionnaire" do
     assert_difference('Questionnaire.count') do
-      post :create, questionnaire: { age: @questionnaire.age, as_pain: @questionnaire.as_pain, fatigue: @questionnaire.fatigue, gender: @questionnaire.gender, localized_discomfort: @questionnaire.localized_discomfort, medication: @questionnaire.medication, medication_effectiveness: @questionnaire.medication_effectiveness, morning_stiffness: @questionnaire.morning_stiffness, other_pain: @questionnaire.other_pain, wakeup_discomfort: @questionnaire.wakeup_discomfort }
+      post :create, questionnaire: { age: @questionnaire.age, as_pain: @questionnaire.as_pain, fatigue: @questionnaire.fatigue, 
+                                     gender: @questionnaire.gender, localized_discomfort: @questionnaire.localized_discomfort, 
+                                     medication: @questionnaire.medication, medication_effectiveness: @questionnaire.medication_effectiveness, 
+                                     morning_stiffness: @questionnaire.morning_stiffness, other_pain: @questionnaire.other_pain, 
+                                     wakeup_discomfort: @questionnaire.wakeup_discomfort }
     end
 
     assert_redirected_to questionnaire_path(assigns(:questionnaire))
@@ -35,7 +39,11 @@ class QuestionnairesControllerTest < ActionController::TestCase
   end
 
   test "should update questionnaire" do
-    put :update, id: @questionnaire, questionnaire: { age: @questionnaire.age, as_pain: @questionnaire.as_pain, fatigue: @questionnaire.fatigue, gender: @questionnaire.gender, localized_discomfort: @questionnaire.localized_discomfort, medication: @questionnaire.medication, medication_effectiveness: @questionnaire.medication_effectiveness, morning_stiffness: @questionnaire.morning_stiffness, other_pain: @questionnaire.other_pain, wakeup_discomfort: @questionnaire.wakeup_discomfort }
+    put :update, id: @questionnaire, questionnaire: { age: @questionnaire.age, as_pain: @questionnaire.as_pain, fatigue: @questionnaire.fatigue, 
+                                                      gender: @questionnaire.gender, localized_discomfort: @questionnaire.localized_discomfort, 
+                                                      medication: @questionnaire.medication, medication_effectiveness: @questionnaire.medication_effectiveness, 
+                                                      morning_stiffness: @questionnaire.morning_stiffness, other_pain: @questionnaire.other_pain, 
+                                                      wakeup_discomfort: @questionnaire.wakeup_discomfort }
     assert_redirected_to questionnaire_path(assigns(:questionnaire))
   end
 

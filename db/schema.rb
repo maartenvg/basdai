@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402202158) do
+ActiveRecord::Schema.define(:version => 20130408131756) do
 
   create_table "basdai_forms", :force => true do |t|
     t.string   "medication"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130402202158) do
     t.integer  "other_pain"
     t.integer  "localized_discomfort"
     t.integer  "wakeup_discomfort"
-    t.decimal  "morning_stiffness"
+    t.integer  "morning_stiffness"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
   end

@@ -4,22 +4,21 @@ one:
   medication: MyString
   medication_effectiveness: 1
   age: 1
-  gender: MyString
+  gender: m
   fatigue: 1
   as_pain: 1
   other_pain: 1
   localized_discomfort: 1
   wakeup_discomfort: 1
-  morning_stiffness: 9.99
+  morning_stiffness: 5
 
 two:
-  medication: MyString
   medication_effectiveness: 1
   age: 1
-  gender: MyString
+  gender: f
   fatigue: 1
   as_pain: 1
   other_pain: 1
   localized_discomfort: 1
   wakeup_discomfort: 1
-  morning_stiffness: 9.99
+  morning_stiffness: 9

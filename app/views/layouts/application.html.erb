@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BasdaiApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!--[if lt IE 7 ]><html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>BASDAI app</title>
+		<meta name="author" content="Maarten van Grootel - http://www.maartenvangrootel.nl">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<%= yield %>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
 
-</body>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="main" class="container">
+			<header class="sixteen columns">
+				&nbsp;
+			</header>
+			<div id="content" class="two-thirds column">
+				<%= yield %>
+			</div>
+			<div id="sidebar" class="one-third">
+				<%= render "layouts/sidebar" %>
+			</div>
+			<footer class="sixteen columns">
+				&nbsp;
+			</footer>
+		</div>
+	</body>
 </html>

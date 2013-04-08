@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     !session[:user_id].nil?
   end
   
+  def active_user
+    User.find_by_id(session[:user_id])
+  end
+  
   def login_user (user)
     session[:user_id] = user.id
   end

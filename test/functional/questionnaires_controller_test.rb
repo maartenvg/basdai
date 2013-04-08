@@ -2,7 +2,7 @@ require 'test_helper'
 
 class QuestionnairesControllerTest < ActionController::TestCase
   setup do
-    @questionnaire = questionnaires(:one)
+    @questionnaire = questionnaires(:max)
   end
 
   test "should get index" do

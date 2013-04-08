@@ -1,20 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  medication: MyString
-  medication_effectiveness: 1
-  fatigue: 1
-  as_pain: 1
-  other_pain: 1
-  localized_discomfort: 1
-  wakeup_discomfort: 1
-  morning_stiffness: 5
+max:
+  medication: Maximum Score
+  medication_effectiveness: 10
+  fatigue: 10
+  as_pain: 10
+  other_pain: 10
+  localized_discomfort: 10
+  wakeup_discomfort: 10
+  morning_stiffness: 10
 
-two:
+range:
+  medication: Score Range
+  medication_effectiveness: 1
+  fatigue: 1
+  as_pain: 2
+  other_pain: 3
+  localized_discomfort: 4
+  wakeup_discomfort: 5
+  morning_stiffness: 6
+
+min:
+  medication: Minimum Score
   medication_effectiveness: 1
   fatigue: 1
   as_pain: 1
   other_pain: 1
   localized_discomfort: 1
   wakeup_discomfort: 1
-  morning_stiffness: 9
+  morning_stiffness: 0

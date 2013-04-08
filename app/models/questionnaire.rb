@@ -13,6 +13,6 @@ class Questionnaire < ActiveRecord::Base
   def score
     overall = fatigue + as_pain + other_pain + localized_discomfort;
     mornings = wakeup_discomfort + morning_stiffness;
-    (overall + ( mornings / 2 ) ) * 0.2;
+    ((overall + ( mornings / 2.0 ) ) * 0.2).round(1);
   end
 end

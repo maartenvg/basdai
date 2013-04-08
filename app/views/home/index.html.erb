@@ -1,2 +1,7 @@
 <h1>Welcome!</h1>
-<%= link_to 'Please login', login_path %>
+<%= if @logged_in 
+		link_to 'Log out', logout_path, method: :delete
+	else
+		link_to 'Please login', login_path 
+	end
+%>

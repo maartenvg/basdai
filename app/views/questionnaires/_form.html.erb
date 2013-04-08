@@ -25,7 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.select :gender, 1..10 %>
+    <%= f.radio_button :gender, 'm' %> <%= f.label :gender_m %>
+    <%= f.radio_button :gender, 'f' %> <%= f.label :gender_f %>
   </div>
   <div class="field">
     <%= f.label :fatigue %><br />

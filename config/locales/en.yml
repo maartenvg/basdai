@@ -11,6 +11,8 @@ en:
         medication_effectiveness: "Please indicate the effectiveness of the medication in relieving your symptoms. "
         age: "Please indicate your age."
         gender: "Please indicate your gender."
+        gender_m: "Male"
+        gender_f: "Female"
         fatigue: "How would you describe the overall level of fatigue/tiredness you have experienced?"
         as_pain: "How would you describe the overall level of AS neck, back or hip pain you have had?"
         other_pain: "How would you describe the overall level of pain/swelling in joints other than neck, back or hips you have had?"

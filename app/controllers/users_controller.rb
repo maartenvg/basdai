@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+skip_before_filter :authorize, only: [:new, :create]  
+  
   # GET /users
   # GET /users.json
   def index
@@ -41,10 +43,14 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-
+    
+    saved = @user.save
+    
+    login_user(@user) if saved
+    
     respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+      if saved
+        format.html { redirect_to @user }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }

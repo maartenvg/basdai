@@ -17,10 +17,13 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should create user" do
+    logout
+    
     assert_difference('User.count') do
       post :create, user: { email: @user.email, name: "#{@user.name}2", password: "test", password_confirmation: "test", gender: @user.gender, birthdate: @user.birthdate }
     end
-
+    
+    assert_equal assigns(:user).id, session[:user_id]
     assert_redirected_to user_path(assigns(:user))
   end
 

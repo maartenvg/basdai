@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_name(params[:name])
     if user and user.authenticate(params[:password])
-      session[:user_id] = user.id
+      login_user(user)
       redirect_to root_url
     else
       redirect_to login_url, alert: "Invalid user or password. Please try again"

@@ -17,39 +17,39 @@
   </div>
   <div class="field">
     <%= f.label :medication_effectiveness %><br />
-    <%= f.number_field :medication_effectiveness %>
+    <%= f.select :medication_effectiveness, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :age %><br />
-    <%= f.number_field :age %>
+    <%= f.select :age, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+    <%= f.select :gender, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :fatigue %><br />
-    <%= f.number_field :fatigue %>
+    <%= f.select :fatigue, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :as_pain %><br />
-    <%= f.number_field :as_pain %>
+    <%= f.select :as_pain, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :other_pain %><br />
-    <%= f.number_field :other_pain %>
+    <%= f.select :other_pain, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :localized_discomfort %><br />
-    <%= f.number_field :localized_discomfort %>
+    <%= f.select :localized_discomfort, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :wakeup_discomfort %><br />
-    <%= f.number_field :wakeup_discomfort %>
+    <%= f.select :wakeup_discomfort, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :morning_stiffness %><br />
-    <%= f.text_field :morning_stiffness %>
+    <%= f.select :morning_stiffness, 1..11 %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -3,6 +3,9 @@ class Questionnaire < ActiveRecord::Base
   validates_inclusion_of :medication_effectiveness, in: 1..10, allow_nil: true
   validates_inclusion_of :as_pain, :fatigue, :localized_discomfort, :other_pain, :wakeup_discomfort, in: 1..10
   validates_inclusion_of :morning_stiffness, in: 0..10
+  
+  belongs_to :user
+  
   def to_s
     "Questionnaire no. #{@id}"
   end

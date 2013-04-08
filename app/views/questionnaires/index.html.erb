@@ -2,14 +2,8 @@
 
 <table>
   <tr>
-    <th>Medication</th>
-    <th>Medication effectiveness</th>
-    <th>Fatigue</th>
-    <th>As pain</th>
-    <th>Other pain</th>
-    <th>Localized discomfort</th>
-    <th>Wakeup discomfort</th>
-    <th>Morning stiffness</th>
+    <th>Created at</th>
+    <th>Score</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +11,8 @@
 
 <% @questionnaires.each do |questionnaire| %>
   <tr>
-    <td><%= questionnaire.medication %></td>
-    <td><%= questionnaire.medication_effectiveness %></td>
-    <td><%= questionnaire.fatigue %></td>
-    <td><%= questionnaire.as_pain %></td>
-    <td><%= questionnaire.other_pain %></td>
-    <td><%= questionnaire.localized_discomfort %></td>
-    <td><%= questionnaire.wakeup_discomfort %></td>
-    <td><%= questionnaire.morning_stiffness %></td>
+    <td><%= questionnaire.created_at %></td>
+    <td><%= questionnaire.score %></td>
     <td><%= link_to 'Show', questionnaire %></td>
     <td><%= link_to 'Edit', edit_questionnaire_path(questionnaire) %></td>
     <td><%= link_to 'Destroy', questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>

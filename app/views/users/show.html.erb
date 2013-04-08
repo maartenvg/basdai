@@ -6,13 +6,18 @@
 </p>
 
 <p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
+  <b>Email:</b>
+  <%= @user.email %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Gender:</b>
+  <%= @user.print_gender %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%= @user.birthdate %> (<%= @user.age %>)
 </p>
 
 

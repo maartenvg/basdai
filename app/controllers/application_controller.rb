@@ -12,6 +12,13 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def not_logged_in
+    if logged_in?
+      redirect_to @current_user
+    end
+  end
+  
+  
   def logged_in?
     !!current_user
   end

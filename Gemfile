@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '~> 3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,5 +36,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use debugger
 # gem 'debugger'
 
-gem 'foreigner'
-gem 'immigrant'
+group :test do
+  gem 'mocha', require: false
+end
+
+group :development, :test do
+  gem 'foreigner'
+  gem 'immigrant'
+end

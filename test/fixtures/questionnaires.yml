@@ -9,6 +9,7 @@ max:
   localized_discomfort: 10
   wakeup_discomfort: 10
   morning_stiffness: 10
+  user_id: 1
 
 range:
   medication: Score Range
@@ -19,6 +20,7 @@ range:
   localized_discomfort: 4
   wakeup_discomfort: 5
   morning_stiffness: 6
+  user_id: 1
 
 min:
   medication: Minimum Score
@@ -29,3 +31,4 @@ min:
   localized_discomfort: 1
   wakeup_discomfort: 1
   morning_stiffness: 0
+  user_id: 2

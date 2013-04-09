@@ -2,6 +2,6 @@ class HomeController < ApplicationController
   skip_before_filter :authorize
   
   def index
-    @logged_in = active_user?
+    @logged_in = logged_in?
   end
 end

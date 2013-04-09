@@ -7,20 +7,25 @@ class ApplicationController < ActionController::Base
   private
   
   def authorize
-    unless User.find_by_id(session[:user_id])
+    unless logged_in?
       redirect_to login_url, notice: "Please log in"
     end
   end
   
-  def active_user?
-    !session[:user_id].nil?
+  def logged_in?
+    !!current_user
   end
   
-  def active_user
-    User.find_by_id(session[:user_id])
+  def current_user
+    @current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
   end
   
-  def login_user (user)
+  def login_user(user)
+    @current_user = user
     session[:user_id] = user.id
+  end
+  
+  def logout_user
+    @current_user = session[:user_id] = nil
   end
 end

@@ -1,83 +1,69 @@
 class QuestionnairesController < ApplicationController
   # GET /questionnaires
-  # GET /questionnaires.json
   def index
-    @questionnaires = Questionnaire.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @questionnaires }
-    end
+    @questionnaires = Questionnaire.where(user_id: @current_user.id)
   end
 
   # GET /questionnaires/1
-  # GET /questionnaires/1.json
   def show
     @questionnaire = Questionnaire.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @questionnaire }
+    unless @questionnaire.user == @current_user
+      render file: 'public/403', formats: [:html], status: :forbidden
     end
   end
 
   # GET /questionnaires/new
-  # GET /questionnaires/new.json
   def new
     @questionnaire = Questionnaire.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @questionnaire }
-    end
   end
 
   # GET /questionnaires/1/edit
   def edit
     @questionnaire = Questionnaire.find(params[:id])
+    
+    unless @questionnaire.user == @current_user
+      render file: 'public/403', formats: [:html], status: :forbidden
+    end
   end
 
   # POST /questionnaires
-  # POST /questionnaires.json
   def create
     @questionnaire = Questionnaire.new(params[:questionnaire])
-
-    respond_to do |format|
-      if @questionnaire.save
-        format.html { redirect_to @questionnaire, notice: 'Questionnaire was successfully created.' }
-        format.json { render json: @questionnaire, status: :created, location: @questionnaire }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @questionnaire.errors, status: :unprocessable_entity }
-      end
+    @questionnaire.user = @current_user
+    
+    if @questionnaire.save
+      redirect_to @questionnaire, notice: 'Questionnaire was successfully created.'
+    else
+      render action: "new"
     end
   end
 
   # PUT /questionnaires/1
-  # PUT /questionnaires/1.json
   def update
     @questionnaire = Questionnaire.find(params[:id])
 
-    respond_to do |format|
-      if @questionnaire.update_attributes(params[:questionnaire])
-        format.html { redirect_to @questionnaire, notice: 'Questionnaire was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @questionnaire.errors, status: :unprocessable_entity }
-      end
+    unless @questionnaire.user == @current_user
+      return render file: 'public/403', formats: [:html], status: :forbidden
+    end
+
+    if @questionnaire.update_attributes(params[:questionnaire])
+      redirect_to @questionnaire, notice: 'Questionnaire was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
   # DELETE /questionnaires/1
-  # DELETE /questionnaires/1.json
   def destroy
     @questionnaire = Questionnaire.find(params[:id])
+    
+    unless @questionnaire.user == @current_user
+      return render file: 'public/403', formats: [:html], status: :forbidden
+    end
+    
     @questionnaire.destroy
 
-    respond_to do |format|
-      format.html { redirect_to questionnaires_url }
-      format.json { head :no_content }
-    end
+    redirect_to questionnaires_url
   end
 end

@@ -6,7 +6,7 @@ john:
   email: john@example.com
   gender: m
   birthdate: 1930-11-23
-  password_digest: dsffsdsdfs
+  password_digest: <%= BCrypt::Password.create('secret') %>
 
 jane:
   id: 2
@@ -14,4 +14,4 @@ jane:
   email: jane@example.com
   gender: f
   birthdate: 1963-01-19
-  password_digest: dsffsdsdfs
+  password_digest: <%= BCrypt::Password.create('secret_jane') %>

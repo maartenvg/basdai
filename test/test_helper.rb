@@ -18,8 +18,4 @@ class ActiveSupport::TestCase
   def logout
     session.delete :user_id
   end
-  
-  def setup
-    login_as :john if defined? session
-  end
 end
